@@ -11,6 +11,7 @@
 }
 
 /* Header Styles */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -19,13 +20,8 @@
 }
 
 .logo {
-    position: absolute;
-  top: 20px; /* Adjust the value according to your design */
-  left: 20px; /* Adjust the value according to your design */
+     /* Your logo styles */
 }
-
-img {
-     width: 100%; /* Span the entire width of the container */
 
 .menu {
   position: absolute;
@@ -33,13 +29,12 @@ img {
   right: 20px; /* Adjust the value according to your design */
   list-style: none;
 
-.menu li {
-    display: inline-block;
-    display: flex;
-}
+.menu ul {
+    list-style: none;
+    display: flex
 
 .menu li {
-    margin-right: 0px;
+    margin-right: 20px;
 }
 
 /* Hero Styles */
