@@ -19,16 +19,27 @@
 }
 
 .logo {
-    /* Your logo styles */
+    position: absolute;
+  top: 20px; /* Adjust the value according to your design */
+  left: 20px; /* Adjust the value according to your design */
 }
 
-.menu ul {
-    list-style: none;
+img {
+     width: 100%; /* Span the entire width of the container */
+
+.menu {
+  position: absolute;
+  top: 20px; /* Adjust the value according to your design */
+  right: 20px; /* Adjust the value according to your design */
+  list-style: none;
+
+.menu li {
+    display: inline-block;
     display: flex;
 }
 
 .menu li {
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 /* Hero Styles */
