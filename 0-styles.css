@@ -1,58 +1,61 @@
-/* Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('https://www.fontsquirrel.com/fonts/source-sans-pro/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+/* CSS Reset */
+* {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
     display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 20px;
 }
 
 /* Header Styles */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.menu {
+  display: flex;
+  gap: 50px;
+  flex: 3;
+  justify-content: flex-end;
+  right: 20px; /* Adjust the value according to your design */
+  list-style: none;
+ 
+.menu ul {
+    display: flex
+    align-items: flex-start;
+
+.menu li {
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+.nav a:hover {
+    color: #ff4040;
+}
+
+/* Hero Styles */
+
 .hero {
-    background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
+    position: relative;
+    text-align: center;
+}
+
+.hero {
+ background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
     height: 100vh;
     color: #ffffff;
     display: flex;
@@ -62,137 +65,68 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
-}
-
-.hero-container {
-    width: 80%;
-    max-width: 1200px;
-    position: relative;
-}
-
-.logo-nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    flex: 1;
-    text-align: left;
-    text-wrap: nowrap;
-    margin-right: 5px;
-}
-
-.nav {
-    display: flex;
-    gap: 40px;
-    flex: 2;
-    justify-content: flex-end;
-}
-
-.nav a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.2s;
-    padding: 10px 15px;
-    margin: 0 5px;
-}
-
-
-.nav ul {
-    display: flex;
-    gap: 20px; /* Add some spacing between the items */
-}
-
-.nav a:hover {
-    color: #dddddd;
+    width: 100%;
 }
 
 .hero-content {
-    position: relative; /* Changed from absolute for better flexibility */
-    text-align: center;
-    padding-left: 0;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
-    
-
+    transform: translate(-50%, -50%);
 }
 
-.hero-content h1 {
-    font-size: 56px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+/* Section Styles */
+.section1,
+.section2 {
+    text-align: center;
+    padding: 20px;
 }
 
-.hero-content p {
-    font-size: 16px;
-    margin-bottom: 40px;
-    max-width: 60%;
+.icons {
+    display: flex;
+    justify-content: center;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 25px;
-    background-color: #FF5B5B;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.icon {
+    margin: 0 20px;
 }
 
-.cta-button:hover {
-    background-color: #e8910d;
+/* Contact Section Styles */
+.contact {
+    text-align: center;
+    padding: 20px;
 }
 
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    .hero-container {
-        width: 90%;
-    }
-
-    .nav {
-        display: none; /* Or adjust to a mobile menu */
-    }
-
-    .nav a {
-        font-size: 14px; /* Reduced font size */
-        padding: 5px 10px; /* Reduced padding */
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-        
-    }
-
-    .hero-content p {
-        font-size: 14px; /* Reduced font size for paragraph */
-        margin-bottom: 20px;
-        max-width: 80%;
-    }
-
-    .logo {
-        margin-right: 5px; /* Reduce the logo margin for smaller screens */
-    }
-    
-    .cta-button {
-        padding: 10px 20px; /* Slightly reduce button padding for smaller screens */
-    }
+    /* Add your responsive styles here */
 }
 
-    blockquote, q {
-        quotes: none;
-    }
+@media (max-width: 480px) {
+    /* Add your mobile styles here */
+}
