@@ -1,0 +1,101 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    /* Your logo styles */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+/* Hero Styles */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Section Styles */
+.section1,
+.section2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Add your responsive styles here */
+}
+
+@media (max-width: 480px) {
+    /* Add your mobile styles here */
+}
+
