@@ -7,7 +7,9 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
+    vertical-align: baseline;
+    display: block;
 }
 
 /* Header Styles */
@@ -20,17 +22,19 @@
 }
 
 .logo {
-     /* Your logo styles */
+    flex: 1;
+    margin-right: 5px;
 }
 
 .menu {
-  position: absolute;
-  top: 20px; /* Adjust the value according to your design */
+  display: flex;
+  gap: 50px;
+  flex: 3;
+  justify-content: flex-end;
   right: 20px; /* Adjust the value according to your design */
   list-style: none;
-
+ 
 .menu ul {
-    list-style: none;
     display: flex
     align-items: flex-start;
 
@@ -39,13 +43,28 @@
     align-self: flex-start;
 }
 
+.nav a:hover {
+    color: #ff4040;
+}
+
 /* Hero Styles */
+
 .hero {
     position: relative;
     text-align: center;
 }
 
-.hero img {
+.hero {
+ background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 100%;
 }
 
@@ -81,7 +100,7 @@
 .contact form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
