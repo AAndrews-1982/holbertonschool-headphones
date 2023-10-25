@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('https://www.fontsquirrel.com/fonts/source-sans-pro/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    display: block;
+}
+
+/* Header Styles */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.menu {
+  display: flex;
+  gap: 50px;
+  flex: 3;
+  justify-content: flex-end;
+  right: 20px; /* Adjust the value according to your design */
+  list-style: none;
+ 
+.menu ul {
+    display: flex
+    align-items: flex-start;
+
+.menu li {
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+.nav a:hover {
+    color: #ff4040;
+}
+
+/* Hero Styles */
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero {
+ background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+}
+
+
+.hero-container {
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* Section Styles */
+.
+section1,
+.section2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Add your responsive styles here */
+}
+
+@media (max-width: 480px) {
+    /* Add your mobile styles here */
+}
